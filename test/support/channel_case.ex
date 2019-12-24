@@ -1,4 +1,4 @@
-defmodule QueuehubWeb.ChannelCase do
+defmodule JamstackWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule QueuehubWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint QueuehubWeb.Endpoint
+      @endpoint JamstackWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Queuehub.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Jamstack.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Queuehub.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Jamstack.Repo, {:shared, self()})
     end
 
     :ok

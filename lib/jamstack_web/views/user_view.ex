@@ -1,6 +1,6 @@
-defmodule QueuehubWeb.UserView do
-  use QueuehubWeb, :view
-  alias QueuehubWeb.UserView
+defmodule JamstackWeb.UserView do
+  use JamstackWeb, :view
+  alias JamstackWeb.UserView
 
   def render("index.json", %{users: users}) do
     %{data: render_many(users, UserView, "user.json")}

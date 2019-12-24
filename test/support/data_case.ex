@@ -1,4 +1,4 @@
-defmodule Queuehub.DataCase do
+defmodule Jamstack.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule Queuehub.DataCase do
 
   using do
     quote do
-      alias Queuehub.Repo
+      alias Jamstack.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Queuehub.DataCase
+      import Jamstack.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Queuehub.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Jamstack.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Queuehub.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Jamstack.Repo, {:shared, self()})
     end
 
     :ok

@@ -1,8 +1,8 @@
-defmodule QueuehubWeb.UserControllerTest do
-  use QueuehubWeb.ConnCase
+defmodule JamstackWeb.UserControllerTest do
+  use JamstackWeb.ConnCase
 
-  alias Queuehub.Rooms
-  alias Queuehub.Rooms.User
+  alias Jamstack.Rooms
+  alias Jamstack.Rooms.User
 
   @create_attrs %{
     name: "some name",

@@ -1,10 +1,10 @@
-defmodule Queuehub.RoomsTest do
-  use Queuehub.DataCase
+defmodule Jamstack.RoomsTest do
+  use Jamstack.DataCase
 
-  alias Queuehub.Rooms
+  alias Jamstack.Rooms
 
   describe "rooms" do
-    alias Queuehub.Rooms.Room
+    alias Jamstack.Rooms.Room
 
     @valid_attrs %{code: "some code", name: "some name"}
     @update_attrs %{code: "some updated code", name: "some updated name"}

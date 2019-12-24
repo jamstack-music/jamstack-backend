@@ -1,10 +1,10 @@
 use Mix.Config
 
 # Configure your database
-config :queuehub, Queuehub.Repo,
+config :jamstack, Jamstack.Repo,
   username: "postgres",
   password: "postgres",
-  database: "queuehub_dev",
+  database: "jamstack_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -15,7 +15,7 @@ config :queuehub, Queuehub.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :queuehub, QueuehubWeb.Endpoint,
+config :jamstack, JamstackWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

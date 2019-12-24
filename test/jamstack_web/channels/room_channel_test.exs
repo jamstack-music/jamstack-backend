@@ -1,10 +1,10 @@
-defmodule QueuehubWeb.RoomChannelTest do
-  use QueuehubWeb.ChannelCase
+defmodule JamstackWeb.RoomChannelTest do
+  use JamstackWeb.ChannelCase
 
   setup do
     {:ok, _, socket} =
-      socket(QueuehubWeb.UserSocket, "user_id", %{some: :assign})
-      |> subscribe_and_join(QueuehubWeb.RoomChannel, "room:lobby")
+      socket(JamstackWeb.UserSocket, "user_id", %{some: :assign})
+      |> subscribe_and_join(JamstackWeb.RoomChannel, "room:lobby")
 
     {:ok, socket: socket}
   end

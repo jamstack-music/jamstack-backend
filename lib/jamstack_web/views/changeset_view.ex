@@ -1,11 +1,11 @@
-defmodule QueuehubWeb.ChangesetView do
-  use QueuehubWeb, :view
+defmodule JamstackWeb.ChangesetView do
+  use JamstackWeb, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `QueuehubWeb.ErrorHelpers.translate_error/1` for more details.
+  `JamstackWeb.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)

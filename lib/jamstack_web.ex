@@ -1,12 +1,12 @@
-defmodule QueuehubWeb do
+defmodule JamstackWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use QueuehubWeb, :controller
-      use QueuehubWeb, :view
+      use JamstackWeb, :controller
+      use JamstackWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,26 +19,26 @@ defmodule QueuehubWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: QueuehubWeb
+      use Phoenix.Controller, namespace: JamstackWeb
 
       import Plug.Conn
-      import QueuehubWeb.Gettext
-      alias QueuehubWeb.Router.Helpers, as: Routes
+      import JamstackWeb.Gettext
+      alias JamstackWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/queuehub_web/templates",
-        namespace: QueuehubWeb
+        root: "lib/jamstack_web/templates",
+        namespace: JamstackWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import QueuehubWeb.ErrorHelpers
-      import QueuehubWeb.Gettext
-      alias QueuehubWeb.Router.Helpers, as: Routes
+      import JamstackWeb.ErrorHelpers
+      import JamstackWeb.Gettext
+      alias JamstackWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -53,7 +53,7 @@ defmodule QueuehubWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import QueuehubWeb.Gettext
+      import JamstackWeb.Gettext
     end
   end
 

@@ -1,4 +1,4 @@
-# Queuehub
+# Jamstack
 
 To start your Phoenix server:
 

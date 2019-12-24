@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :queuehub,
-  ecto_repos: [Queuehub.Repo]
+config :jamstack,
+  ecto_repos: [Jamstack.Repo]
 
 # Configures the endpoint
-config :queuehub, QueuehubWeb.Endpoint,
+config :jamstack, JamstackWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "ImhOXB/didTflmXEafsXXHbyDywN+TPo/ZlijIcTf1vNtgjU2VdG3GZYfct34+uh",
-  render_errors: [view: QueuehubWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Queuehub.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: JamstackWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Jamstack.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

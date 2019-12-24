@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Queuehub.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Jamstack.Repo, :manual)
