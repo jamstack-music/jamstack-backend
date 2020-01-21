@@ -20,7 +20,7 @@ defmodule Jamstack.MixProject do
   def application do
     [
       mod: {Jamstack.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:spotify_ex, :logger, :runtime_tools]
     ]
   end
 
@@ -33,14 +33,18 @@ defmodule Jamstack.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:cors_plug, "~> 2.0"},
       {:phoenix, "~> 1.4.9"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
+      {:phoenix_html, "~> 2.10"},
       {:ecto_sql, "~> 3.1"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:spotify_ex, "~> 2.0.9"},
+      {:httpoison, "~> 1.0.0"}
     ]
   end
 
