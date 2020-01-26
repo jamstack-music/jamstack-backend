@@ -5,9 +5,10 @@ defmodule Jamstack.Application do
 
   def start(_type, _args) do
     children = [
-      Jamstack.Room.Registry,
+      {Registry, keys: :unique, name: Jamstack.Rooms.Registry },
+      Jamstack.Rooms.Supervisor,
       JamstackWeb.Endpoint,
-      Jamstack.RoomSupervisor
+      Jamstack.Dictionary
     ]
 
     opts = [strategy: :one_for_one, name: Jamstack.Supervisor]
