@@ -3,8 +3,7 @@ defmodule QueuhubWeb.RoomController do
 
   alias Jamstack.Rooms
 
-  def index(conn, %{"id" => id}) do
-    case Registry.
-
+  def index(conn, _) do
+    conn
   end
 end
