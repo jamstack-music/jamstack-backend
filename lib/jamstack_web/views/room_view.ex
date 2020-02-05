@@ -2,7 +2,7 @@ defmodule JamstackWeb.RoomView do
   use JamstackWeb, :view
   
   def render("show.json", %{room: room}) do
-    %{data: render_one(room, JamstackWeb.RoomView, "room.json")}
+    %{room: render_one(room, JamstackWeb.RoomView, "room.json")}
   end
 
   def render("room.json", %{room: room}) do
